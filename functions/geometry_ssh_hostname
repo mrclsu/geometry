@@ -1,5 +1,7 @@
 # geometry_ssh_hostname - show user@hostname, but only in an ssh session
 # To always show user@hostname, use geometry_hostname instead
+# Set GEOMETRY_SSH_HOSTNAME_NEWLINE=true to move the rest of the prompt to a new line
 
 [[ -z $SSH_CLIENT && -z $SSH_CONNECTION && -z $SSH_TTY ]] && return
 geometry_hostname
+if ${GEOMETRY_SSH_HOSTNAME_NEWLINE:-false}; then echo "\n\0"; fi

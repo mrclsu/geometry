@@ -230,6 +230,10 @@ default in the prompt. To always show user and hostname, use
 [`geometry_hostname`](#geometry_hostname) instead. Supports the same
 `GEOMETRY_HOSTNAME_*` variables as `geometry_hostname`.
 
+| Variable                        | Description                                                  | Default |
+| ------------------------------- | ------------------------------------------------------------ | ------- |
+| `GEOMETRY_SSH_HOSTNAME_NEWLINE` | Move the rest of the prompt to a new line below the hostname | `false` |
+
 ## `geometry_status`
 
 Show a symbol with error/success and root/non-root information.
