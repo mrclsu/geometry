@@ -116,8 +116,17 @@ geometry::wrap() {
 
 geometry::rprompt::set() {
   if [[ -z "$2" || "$2" == "hup" ]]; then
-    read -r -u "$GEOMETRY_ASYNC_FD" RPROMPT
-    builtin zle reset-prompt
+    # Always read from the fd zle reports ($1), never from the global
+    # GEOMETRY_ASYNC_FD: precmd may run again while a previous async job is
+    # still in flight (e.g. zsh-defer re-runs precmd hooks on first zle idle),
+    # and the global then points at the newer job's fd.
+    local line
+    # On EOF read fails; keep the current RPROMPT and skip the redraw so a
+    # previously drawn right prompt is not blanked.
+    if read -r -u "$1" line; then
+      RPROMPT=$line
+      builtin zle reset-prompt
+    fi
     exec {1}<&-
   fi
   builtin zle -F "$1"

@@ -12,6 +12,8 @@ versions:
     changes:
       added:
         - Add geometry_toolbox function showing an icon inside toolbox/distrobox containers
+      fixed:
+        - Fix right prompt being erased on the initial prompt when precmd hooks run again while a previous async render is still in flight (e.g. with zsh-defer)
 
   - version: 3.0.0
     date: 2026-09-01
