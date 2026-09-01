@@ -35,6 +35,7 @@ autoload -Uz \
   geometry_rustup \
   geometry_ssh_hostname \
   geometry_status \
+  geometry_toolbox \
   geometry_virtualenv
 
 (( $+functions[ansi] )) || ansi() { (($# - 2)) || builtin echo -n "%F{$1}$2%f"; }

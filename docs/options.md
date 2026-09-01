@@ -30,6 +30,7 @@ and functionality.
 - [`geometry_rustup`](#geometry_rustup)
 - [`geometry_ssh_hostname`](#geometry_ssh_hostname)
 - [`geometry_status`](#geometry_status)
+- [`geometry_toolbox`](#geometry_toolbox)
 - [`geometry_virtualenv`](#geometry_virtualenv)
 
 ## `geometry_docker_machine`
@@ -243,6 +244,15 @@ Show a symbol with error/success and root/non-root information.
 | `GEOMETRY_STATUS_COLOR_ERROR`              | Indicator color on error                         | `red`     |
 | `GEOMETRY_STATUS_SYMBOL_COLOR_HASH`        | Automatically pick a color based on the hostname | `false`   |
 | `GEOMETRY_STATUS_SYMBOL_COLOR_HASH_COLORS` | Array of colors to choose from                   | `1..16`   |
+
+## `geometry_toolbox`
+
+Show an indicator when running inside a [toolbox](https://containertoolbx.org/) or [distrobox](https://distrobox.it/) container.
+
+| Variable                  | Description     | Default               |
+| ------------------------- | --------------- | --------------------- |
+| `GEOMETRY_TOOLBOX_SYMBOL` | Indicator       | `nf-md-toolbox` icon  |
+| `GEOMETRY_TOOLBOX_COLOR`  | Indicator color | `blue`                |
 
 ## `geometry_virtualenv`
 
