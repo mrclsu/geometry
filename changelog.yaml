@@ -7,6 +7,12 @@
 # it renders as "## [Unreleased]" in changelog.md.
 
 versions:
+  - version: 3.1.0
+    unreleased: true
+    changes:
+      added:
+        - Add geometry_ssh_hostname function, shown in the prompt only during ssh sessions
+
   - version: 3.0.0
     date: 2026-09-01
     notes: |

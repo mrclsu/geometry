@@ -28,6 +28,7 @@ and functionality.
 - [`geometry_ruby`](#geometry_ruby)
 - [`geometry_rust_version`](#geometry_rust_version)
 - [`geometry_rustup`](#geometry_rustup)
+- [`geometry_ssh_hostname`](#geometry_ssh_hostname)
 - [`geometry_status`](#geometry_status)
 - [`geometry_virtualenv`](#geometry_virtualenv)
 
@@ -219,6 +220,14 @@ Display a symbol colored with the currently selected rustup toolchain.
 | `GEOMETRY_RUSTUP_BETA_COLOR`    | Beta color                                                | `yellow` |
 | `GEOMETRY_RUSTUP_NIGHTLY_COLOR` | Nightly color                                             | `red`    |
 | `GEOMETRY_RUSTUP_PIN`           | Can be setup to keep rustup rendering even out of context | `false`  |
+
+## `geometry_ssh_hostname`
+
+Shows user and hostname information, but only when running in an ssh session
+(i.e. when `SSH_CLIENT`, `SSH_CONNECTION` or `SSH_TTY` is set). Enabled by
+default in the prompt. To always show user and hostname, use
+[`geometry_hostname`](#geometry_hostname) instead. Supports the same
+`GEOMETRY_HOSTNAME_*` variables as `geometry_hostname`.
 
 ## `geometry_status`
 
