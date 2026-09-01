@@ -84,7 +84,7 @@ def render_changelog(data):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--changelog", default="changelog.yaml")
-    parser.add_argument("--md", default="changelog.md")
+    parser.add_argument("--md", default="docs/changelog.md")
     parser.add_argument("--notes", default="release_notes.md")
     parser.add_argument("--print-version", action="store_true")
     args = parser.parse_args()
