@@ -1,0 +1,9 @@
+# geometry_toolbox - show an icon when inside a toolbox or distrobox container
+
+# TOOLBOX_PATH is set by toolbox, CONTAINER_ID by distrobox
+[[ -n $TOOLBOX_PATH || -n $CONTAINER_ID || -f /run/.toolboxenv ]] || return 1
+
+: ${GEOMETRY_TOOLBOX_SYMBOL:=$'\U000F09AC'} # nf-md-toolbox
+: ${GEOMETRY_TOOLBOX_COLOR:=blue}
+
+ansi $GEOMETRY_TOOLBOX_COLOR $GEOMETRY_TOOLBOX_SYMBOL

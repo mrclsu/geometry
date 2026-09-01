@@ -34,6 +34,7 @@ autoload -Uz \
   geometry_rust_version \
   geometry_rustup \
   geometry_status \
+  geometry_toolbox \
   geometry_virtualenv
 
 (( $+functions[ansi] )) || ansi() { (($# - 2)) || builtin echo -n "%F{$1}$2%f"; }
