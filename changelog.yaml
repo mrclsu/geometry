@@ -12,6 +12,7 @@ versions:
     changes:
       added:
         - Add geometry_toolbox function showing an icon inside toolbox/distrobox containers
+        - Add geometry_ssh_hostname function, shown in the prompt only during ssh sessions
 
   - version: 3.0.0
     date: 2026-09-01

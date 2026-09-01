@@ -6,7 +6,7 @@
 
 builtin typeset -gA GEOMETRY
 
-(($+GEOMETRY_PROMPT)) || GEOMETRY_PROMPT=(geometry_echo geometry_status geometry_path)
+(($+GEOMETRY_PROMPT)) || GEOMETRY_PROMPT=(geometry_ssh_hostname geometry_echo geometry_status geometry_path)
 (($+GEOMETRY_RPROMPT)) || GEOMETRY_RPROMPT=(geometry_git geometry_hg geometry_jj geometry_echo)
 (($+GEOMETRY_INFO)) || GEOMETRY_INFO=()
 (($+GEOMETRY_TITLE)) || GEOMETRY_TITLE=(geometry_path)
@@ -33,6 +33,7 @@ autoload -Uz \
   geometry_ruby \
   geometry_rust_version \
   geometry_rustup \
+  geometry_ssh_hostname \
   geometry_status \
   geometry_toolbox \
   geometry_virtualenv
