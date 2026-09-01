@@ -34,12 +34,8 @@ Geometry also has a secondary prompt that shows up when pressing enter with an e
 
 tool          | add to `.zshrc`
 --------------|--------------------------------------
-[zr][]        | `zr geometry-zsh/geometry`
-[zplug][]     | `zplug "geometry-zsh/geometry"`
-[antigen][]   | `antigen theme geometry-zsh/geometry`
-[Homebrew][]  | `brew install geometry`
-[zi][]        | `zi lucid for atload"!geometry::prompt" geometry-zsh/geometry`
-**manually**  | `source geometry/geometry.zsh` (after `git clone https://github.com/geometry-zsh/geometry`)
+[antidote][]  | `antidote load mrclsu/geometry`
+**manually**  | `source geometry/geometry.zsh` (after `git clone https://github.com/mrclsu/geometry`)
 
 ## Functions
 
@@ -150,9 +146,5 @@ A big thank you to the dozens of [additional contributors](https://github.com/ge
 
 [functions wiki page]: https://github.com/geometry-zsh/geometry/wiki/functions
 [open an issue]: https://github.com/geometry-zsh/geometry/issues/new
-[zr]: https://github.com/jedahan/zr
-[zplug]: https://github.com/zplug/zplug
-[zi]: https://wiki.zshell.dev/docs
-[antigen]: https://github.com/zsh-users/antigen
-[homebrew]: https://brew.sh
+[antidote]: https://getantidote.github.io/
 [our contribution guide]: contributing.md
